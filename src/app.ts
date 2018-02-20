@@ -8,7 +8,7 @@ export class App {
     config.title = 'Aurelia';
 
     config.map([
-      { route: ['', 'home'],  name: 'home',  moduleId: 'components/home/home', nav: true, title: 'Home' }
+      { route: ['', 'home'],  name: 'home',  moduleId: 'home/home', nav: true, title: 'Home' }
     ]);
   }
 }
