@@ -1,1 +1,3 @@
-2018/02/20-19:17:00.697 8056 Reusing MANIFEST C:\dev\test2\.chrome\Default\Sync Data\LevelDB/MANIFEST-000001
+2018/02/20-21:54:29.549 4468 Reusing MANIFEST C:\dev\test2\.chrome\Default\Sync Data\LevelDB/MANIFEST-000001
+2018/02/20-21:54:29.550 4468 Recovering log #3
+2018/02/20-21:54:29.550 4468 Reusing old log C:\dev\test2\.chrome\Default\Sync Data\LevelDB/000003.log 
