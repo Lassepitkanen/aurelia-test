@@ -10,6 +10,7 @@ export class App {
 
     config.map([
       { route: ['','accordion'],  name: 'accordion', moduleId: PLATFORM.moduleName('modules/accordion'),  nav: true, title:'Accordion' },
+      { route: 'checkbox',  name: 'checkbox', moduleId: PLATFORM.moduleName('modules/checkbox'),  nav: true, title:'Checkbox' },
       { route: 'dimmer',  name: 'dimmer', moduleId: PLATFORM.moduleName('modules/dimmer'),  nav: true, title:'Dimmer' },
       { route: 'modal',  name: 'modal', moduleId: PLATFORM.moduleName('modules/modal'),  nav: true, title:'Modal' },
       { route: 'nag',  name: 'nag', moduleId: PLATFORM.moduleName('modules/nag'),  nav: true, title:'Nag' },
