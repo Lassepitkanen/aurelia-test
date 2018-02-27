@@ -1,7 +1,9 @@
 <template>
   <h1>Checkbox</h1>
-  <div class="ui checkbox">
-    <input click.delegate="checkTrigger()" name="example" type="checkbox">
+  <div class="ui checkbox" model.bind="checkTrigger()"> 
+    <input type="checkbox" checked.bind="check" > 
     <label>${check}</label>
   </div>
 </template>
+
+
