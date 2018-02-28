@@ -1,6 +1,9 @@
 // Place your settings in this file to overwrite default and user settings.
 {
   "typescript.tsdk": "node_modules/typescript/lib",
+  "tslint.nodePath": "./node_modules/tslint/bin/tslint",
+  "tslint.exclude": ["**/aurelia_project/**", "**/node_modules/**"],
+  "emmet.triggerExpansionOnTab": true,
   "html.suggest.angular1": false,
   "html.suggest.ionic": false
 }
