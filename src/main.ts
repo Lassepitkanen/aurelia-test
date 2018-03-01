@@ -1,14 +1,19 @@
 /// <reference types="aurelia-loader-webpack/src/webpack-hot-interface"/>
 // we want font-awesome to load as soon as possible to show the fa-spinner
-import {Aurelia} from 'aurelia-framework'
+import { Aurelia } from 'aurelia-framework'
 import environment from './environment';
-import {PLATFORM} from 'aurelia-pal';
+import { PLATFORM } from 'aurelia-pal';
 import * as Bluebird from 'bluebird';
+import * as TheLogManager from "aurelia-logging";
 
 // remove out if you don't want a Promise polyfill (remove also from webpack.config.js)
 Bluebird.config({ warnings: { wForgottenReturn: false } });
 
 export function configure(aurelia: Aurelia) {
+  PLATFORM.global.au = aurelia;
+  TheLogManager.setLevel(TheLogManager.logLevel.debug);
+
+  aurelia.use.developmentLogging();
   aurelia.use
     .standardConfiguration()
     .feature(PLATFORM.moduleName('resources/index'));
@@ -20,9 +25,8 @@ export function configure(aurelia: Aurelia) {
   // Anyone wanting to use HTMLImports to load views, will need to install the following plugin.
   // aurelia.use.plugin(PLATFORM.moduleName('aurelia-html-import-template-loader'));
 
-  if (environment.debug) {
-    aurelia.use.developmentLogging();
-  }
+  //if (environment.debug) {
+  //}
 
   if (environment.testing) {
     aurelia.use.plugin(PLATFORM.moduleName('aurelia-testing'));
