@@ -2,9 +2,9 @@ import { PLATFORM } from "aurelia-pal";
 import { Router, RouterConfiguration, NavigationInstruction } from "aurelia-router";
 
 export class App {
-  router: Router;
+  public router: Router;
 
-  configureRouter(config: RouterConfiguration, router: Router): void {
+  public configureRouter(config: RouterConfiguration, router: Router): void {
     this.router = router;
     config.title = 'Aurelia';
 
@@ -12,6 +12,7 @@ export class App {
       { route: ['','accordion'],  name: 'accordion', moduleId: PLATFORM.moduleName('modules/accordion'),  nav: true, title:'Accordion' },
       { route: 'checkbox',  name: 'checkbox', moduleId: PLATFORM.moduleName('modules/checkbox'),  nav: true, title:'Checkbox' },
       { route: 'dimmer',  name: 'dimmer', moduleId: PLATFORM.moduleName('modules/dimmer'),  nav: true, title:'Dimmer' },
+      { route: 'dropdown',  name: 'dropdown', moduleId: PLATFORM.moduleName('modules/dropdown'),  nav: true, title:'Dropdown' },
       { route: 'modal',  name: 'modal', moduleId: PLATFORM.moduleName('modules/modal'),  nav: true, title:'Modal' },
       { route: 'nag',  name: 'nag', moduleId: PLATFORM.moduleName('modules/nag'),  nav: true, title:'Nag' },
       { route: 'popup',  name: 'popup', moduleId: PLATFORM.moduleName('modules/popup'),  nav: true, title:'Popup' },
