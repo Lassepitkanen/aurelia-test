@@ -1,17 +1,11 @@
-<template> 
-    <h1>Tab</h1> 
-  <div class="ui top attached tabular menu">
-    <a class="active item" data-tab="first">First</a>
-    <a class="item" data-tab="second">Second</a>
-    <a class="item" data-tab="third">Third</a>
-  </div>
-  <div class="ui bottom attached active tab segment" data-tab="first">
-    First
-  </div>
-  <div class="ui bottom attached tab segment" data-tab="second">
-    Second
-  </div>
-  <div class="ui bottom attached tab segment" data-tab="third">
-    Third
-  </div>
+<template>
+  <h1>Tab</h1>
+  <ui-tab>
+    <ui-tab-item data-tab="first">ASD1</ui-tab-item>
+    <ui-tab-item data-tab="second">ASD2</ui-tab-item>
+    <ui-tab-item data-tab="third">ASD3</ui-tab-item>
+  </ui-tab>
+  <ui-tab-content data-tab="first">esd1</ui-tab-content>
+  <ui-tab-content data-tab="second">esd2</ui-tab-content>
+  <ui-tab-content data-tab="third">esd3</ui-tab-content>
 </template>
