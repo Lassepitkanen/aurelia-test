@@ -1,9 +1,12 @@
 <template> 
     <h1>Progress</h1> 
   <div class="ui progress">
-    <div class="bar">
-      <div class="progress"></div>
+    <div class="bar" css="width: ${progress}%">
+      <div class="progress">${progress}%</div>
     </div>
     <div class="label">Uploading Files</div>
   </div>
+  <div class="decrement ui basic red button icon" click.delegate="decrementProgress()"><i class="minus icon"></i></div>
+  <div class="increment ui basic green button icon" click.delegate="incrementProgress()"> <i class="plus icon"></i></div> 
 </template>
+
