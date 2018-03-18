@@ -8,7 +8,9 @@ export class DropdownItem{
   public el: HTMLElement;
   public isActive: boolean;
   public ea: EventAggregator;
-  public text = "asd";
+  
+  @bindable()
+   text = "";
 
   constructor(el: Element, ea: EventAggregator) {
     this.el = el as HTMLElement;
