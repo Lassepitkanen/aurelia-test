@@ -1,8 +1,8 @@
 <template class="ui selection dropdown ${isActive ? 'active visible' : ''}" click.delegate="handleClick()">
   <input type="hidden" name="gender">
   <i class="dropdown icon"></i>
-  <div class="default text">Gender</div>
-  <div class="menu ${isActive ? 'transition visible' : ''}">
+  <div class="${defaultTextActive ? 'default text' : 'text'}">${defaultText}</div>
+  <div class="menu ${isActive ? 'transition visible' : ''}" ui-dropdown-item-clicked.trigger="handleItemClicked($event)" >
       <slot></slot>
   </div>
 </template>

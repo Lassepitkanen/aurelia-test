@@ -7,13 +7,18 @@ const name = "ui-dropdown-item";
 export class DropdownItem{
   public el: HTMLElement;
   public isActive: boolean;
+  public ea: EventAggregator;
+  public text = "asd";
 
-  constructor(el: Element) {
+  constructor(el: Element, ea: EventAggregator) {
     this.el = el as HTMLElement;
+    this.ea = ea;
   }
 
-  public handleClick($event){
-    this.isActive = !this.isActive;
-
+  public handleClick(): void {
+    this.el.dispatchEvent(new CustomEvent("ui-dropdown-item-clicked", {
+      detail: this,
+      bubbles: true
+    }));
   }
 }
