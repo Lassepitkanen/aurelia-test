@@ -1,4 +1,5 @@
-import { bindable, customElement, children } from "aurelia-templating";
+import { TabContent } from './ui-tab-content';
+import { resource, bindable, customElement, children } from "aurelia-templating";
 import { EventAggregator, Subscription } from "aurelia-event-aggregator";
 import { TabItem } from './ui-tab-item';
 
@@ -17,14 +18,23 @@ export class Tab {
   @children("ui-tab-item")
   public itemChildren: TabItem[];
 
+  public contentTabs: TabContent[];
+  public attached(): void {
+    let elements = Array.from(document.querySelectorAll("ui-tab-content"));
+    this.contentTabs = elements.map(e => e.au.controller.viewModel);
+  }
+
   public handleItemClicked = (event: CustomEvent): boolean => {
     const clickedItem = event.detail as TabItem;
     for (let i = 0; i < this.itemChildren.length; i++) {
       const item = this.itemChildren[i];
+      const content = this.contentTabs[i];
       if (item === clickedItem) {
         item.isActive = !item.isActive;
+        content.isActive = !content.isActive;
       } else {
         item.isActive = false;
+        content.isActive = false;
       }
     }
 
