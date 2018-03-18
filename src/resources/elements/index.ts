@@ -14,6 +14,7 @@ export function configure(fxconfig: FrameworkConfiguration): void {
     PLATFORM.moduleName("resources/elements/ui-dropdown/ui-dropdown"),
     PLATFORM.moduleName("resources/elements/ui-dropdown/ui-dropdown-item"),
     PLATFORM.moduleName("resources/elements/ui-dimmer/ui-dimmer"),
-    PLATFORM.moduleName("resources/elements/ui-rating/ui-rating")
+    PLATFORM.moduleName("resources/elements/ui-rating/ui-rating"),
+    PLATFORM.moduleName("resources/elements/ui-modal/ui-modal")
   ]);
 }
